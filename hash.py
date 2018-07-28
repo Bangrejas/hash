@@ -40,7 +40,7 @@ def hash_file(filename, sha256_setting):
             if sha256_setting == True:
                 sha256.update(data)
             # loop to calculate per cent completed unless only one chunk
-            if chunks == 1:
+            if chunks <= 1:
                 continue
             else:
                 percent_progress = (progress / chunks) * 100
